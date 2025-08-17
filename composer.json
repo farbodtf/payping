@@ -1,0 +1,40 @@
+{
+  "name": "farbodtf/payping",
+  "description": "PayPing integration for Laravel 11 and 12",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Farbod TaheriFard",
+      "email": "farbod.taherifard@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "illuminate/support": "^11.0 || ^12.0",
+    "guzzlehttp/guzzle": "^7.2",
+    "ext-openssl": "*",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "PayPing\\": "src/"
+    },
+    "files": [
+      "src/helper.php"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "PayPing\\Laravel\\PayPingServiceProvider"
+      ],
+      "aliases": {
+        "Authorization": "PayPing\\Laravel\\Facade\\Authorization",
+        "Payment": "PayPing\\Laravel\\Facade\\Payment"
+      }
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
