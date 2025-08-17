@@ -9,6 +9,7 @@ payment and oauth2 request library for payping
 
 ```bash
 composer require farbodtf/payping
+```
 
 ### درخواست پرداخت
 ```php
